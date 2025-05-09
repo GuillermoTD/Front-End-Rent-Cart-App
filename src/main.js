@@ -4,6 +4,7 @@ import App from './App.vue'
 import PrimeVue from "primevue/config"
 import Aura from "@primevue/themes/aura"
 import { Ripple } from 'primevue'
+import router from './routes'
 
 const app = createApp(App)
 
@@ -16,5 +17,5 @@ app.use(PrimeVue,{
 //Directivas
 app.directive('ripple', Ripple)
 
-
+app.use(router)
 app.mount('#app')

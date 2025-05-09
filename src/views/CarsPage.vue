@@ -1,0 +1,3 @@
+<template>
+    CarsPage
+</template>

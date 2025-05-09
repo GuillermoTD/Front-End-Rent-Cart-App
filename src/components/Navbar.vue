@@ -5,6 +5,8 @@ import InputText from 'primevue/inputtext'
 import Avatar from 'primevue/avatar'
 import Badge from 'primevue/badge'
 import Ripple from 'primevue/ripple'
+import {RouterLink} from "vue-router"
+
 defineProps({
     msg: String,
 })
@@ -13,26 +15,26 @@ defineProps({
 // Menú de navegación
 const items = ref([
     {
-        label: 'Inicio',
+        label: 'Home',
+        url:"/",
         icon: 'pi pi-home',
         command: () => { console.log('Inicio') }
     },
     {
-        label: 'Cursos',
+        label: 'Cars',
+        url:"/cars",
         icon: 'pi pi-book',
         items: [
             {
-                label: 'Mis Cursos',
+                label: 'My Rents',
                 icon: 'pi pi-folder'
             },
-            {
-                label: 'Explorar',
-                icon: 'pi pi-search'
-            }
+           
         ]
     },
     {
-        label: 'Perfil',
+        label: 'profile',
+        url:"/profile",
         icon: 'pi pi-user',
         badge: 3,
         shortcut: 'Ctrl+P'
@@ -44,14 +46,15 @@ const items = ref([
     <div class="w-full bg-slate-100">
         <Menubar :model="items">
             <template #start>
-                <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                <!-- <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="h-8">
                     <path d="..." fill="var(--p-primary-color)" />
                     <path d="..." fill="var(--p-text-color)" />
-                </svg>
+                </svg> -->
+                <p class="text-muted-color">Logo</p>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
-                <a v-ripple class="flex items-center" v-bind="props.action">
+                <RouterLink :to="item.url" v-ripple class="flex items-center" v-bind="props.action">
                     <span>{{ item.label }}</span>
                     <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
                     <span v-if="item.shortcut"
@@ -59,7 +62,7 @@ const items = ref([
                         item.shortcut }}</span>
                     <i v-if="hasSubmenu"
                         :class="['pi pi-angle-down ml-auto', { 'pi-angle-down': root, 'pi-angle-right': !root }]"></i>
-                </a>
+                </RouterLink>
             </template>
             <template #end>
                 <div class="flex items-center gap-2">
@@ -69,8 +72,10 @@ const items = ref([
             </template>
         </Menubar>
     </div>
+</template> 
 
-</template>
+
+
 
 <style scoped>
 @reference "tailwindcss";
