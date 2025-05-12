@@ -43,8 +43,8 @@ const items = ref([
 </script>
 
 <template>
-    <div class="w-full bg-slate-100">
-        <Menubar :model="items">
+    <div class="w-full fixed Navbar">
+        <Menubar :model="items" class="rounded-none">
             <template #start>
                 <!-- <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="h-8">
@@ -66,7 +66,7 @@ const items = ref([
             </template>
             <template #end>
                 <div class="flex items-center gap-2">
-                    <InputText placeholder="Search" type="text" class="w-32 sm:w-auto" />
+                    <!-- <InputText placeholder="Search" type="text" class="w-32 sm:w-auto" /> -->
                     <Avatar image="src\assets\profile.jpg" shape="circle" />
                 </div>
             </template>
@@ -74,13 +74,18 @@ const items = ref([
     </div>
 </template> 
 
-
-
-
 <style scoped>
 @reference "tailwindcss";
 
-.Prueba {
-    @apply bg-emerald-500;
+.Navbar {
+    margin-bottom: 40rem;
+    border:none;
+    z-index: 100;
 }
+
+.p-menubar{
+    border-radius:0%;
+}
+
+
 </style>
