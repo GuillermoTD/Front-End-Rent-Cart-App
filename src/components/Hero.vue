@@ -52,7 +52,9 @@ import Select from 'primevue/select';
             @apply bg-white w-[80%] min-h-[4rem] rounded-[4rem] flex justify-center items-center p-[1.5rem] flex-wrap gap-[1.2rem];
 
             .Hero_Content_Input_Btn {
-                @apply bg-emerald-400 rounded-[0.3rem] w-[10rem] h-[2.7rem] text-center flex justify-center items-center cursor-pointer;
+                @apply rounded-[0.3rem] w-[10rem] h-[2.7rem] text-center flex justify-center items-center cursor-pointer;
+                background:var(--color1);
+                color:white;
             }
 
             .p-select {

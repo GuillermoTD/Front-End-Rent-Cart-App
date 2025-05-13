@@ -47,7 +47,7 @@ console.log(Category.map(item => console.log(item.name)));
     }
 
     &:hover {
-        @apply bg-blue-500;
+        background:var(--color1);
         transition: .4s ease-in-out;
         transform: scale(1.07, 1.07);
         cursor: pointer;

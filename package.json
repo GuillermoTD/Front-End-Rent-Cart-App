@@ -11,8 +11,11 @@
   "dependencies": {
     "@primevue/themes": "^4.3.4",
     "@tailwindcss/vite": "^4.1.6",
+    "@vue-hero-icons/outline": "^1.7.2",
+    "lucide-vue-next": "^0.510.0",
     "primeicons": "^7.0.0",
     "primevue": "^4.3.4",
+    "remixicon": "^4.6.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
   },

@@ -1,6 +1,9 @@
 <script setup>
 import Navbar from "./components/Navbar.vue"
+import Footer from "./components/Footer.vue"
 import { RouterView } from "vue-router"
+import 'remixicon/fonts/remixicon.css';
+
 </script>
 
 <template>
@@ -9,7 +12,7 @@ import { RouterView } from "vue-router"
     <div class="mb-[40rem] min-h-[100vh]">
       <RouterView />
     </div>
-    <footer class="h-[6rem] bg-slate-950 text-white">fOOTER</footer>
+    <Footer></Footer>
   </div>
 </template>
 
