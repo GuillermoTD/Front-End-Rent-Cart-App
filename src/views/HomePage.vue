@@ -11,7 +11,7 @@ console.log(Category.map(item => console.log(item.name)));
 <template>
     <div class="HomePage">
         <Hero></Hero>
-        <h2>Browse By Type</h2>
+        <h2 class="HomePage_Subtitle">Browse By Type</h2>
         <div class="HomePage_CarTypeFilter">
             <div class="HomePage_CarTypeFilter_Item basic-border " v-for="item in Category" :key="item.id">
                 <img :src="item.icon" alt="">
@@ -52,5 +52,9 @@ console.log(Category.map(item => console.log(item.name)));
         transform: scale(1.07, 1.07);
         cursor: pointer;
     }
+}
+
+.HomePage_Subtitle{
+    @apply font-bold text-[2rem] py-[0.8rem];
 }
 </style>

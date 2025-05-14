@@ -45,14 +45,14 @@ const items = ref([
 <template>
     <div class="w-full fixed Navbar">
         <Menubar :model="items" class="rounded-none">
-            <template #start>
-                <!-- <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="h-8">
-                    <path d="..." fill="var(--p-primary-color)" />
-                    <path d="..." fill="var(--p-text-color)" />
-                </svg> -->
-                <p class="text-muted-color">Logo</p>
+            <!-- Logo -->
+            <template #start>   
+                <RouterLink class="text-muted-color Logo">
+                    <img src="../assets/img/roadster-fill.svg" alt="car-icon">
+                    <h2>RentCard</h2>
+                </RouterLink>
             </template>
+            <!-- Link Menu -->
             <template #item="{ item, props, hasSubmenu, root }">
                 <RouterLink :to="item.url" v-ripple class="flex items-center" v-bind="props.action">
                     <span>{{ item.label }}</span>
@@ -64,9 +64,9 @@ const items = ref([
                         :class="['pi pi-angle-down ml-auto', { 'pi-angle-down': root, 'pi-angle-right': !root }]"></i>
                 </RouterLink>
             </template>
+            <!-- Profile bubble -->
             <template #end>
                 <div class="flex items-center gap-2">
-                    <!-- <InputText placeholder="Search" type="text" class="w-32 sm:w-auto" /> -->
                     <Avatar image="src\assets\profile.jpg" shape="circle" />
                 </div>
             </template>
@@ -77,10 +77,17 @@ const items = ref([
 <style scoped>
 @reference "tailwindcss";
 
+.p-menubar{
+    @apply flex gap-[1rem] justify-around;
+}
+
+
 .Navbar {
     margin-bottom: 40rem;
     border:none;
     z-index: 100;
+
+    
 }
 
 .p-menubar{
