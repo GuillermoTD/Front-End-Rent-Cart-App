@@ -86,8 +86,6 @@ const items = ref([
     margin-bottom: 40rem;
     border:none;
     z-index: 100;
-
-    
 }
 
 .p-menubar{

@@ -91,7 +91,7 @@ button:focus-visible {
 }
 
 .Page {
-  @apply mt-[3.4rem];
+  @apply mt-[3.4rem] min-h-[100vh] w-full;
 }
 
 

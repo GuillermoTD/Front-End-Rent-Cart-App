@@ -1,3 +1,3 @@
 <template>
-    ProfilePage
+    <p>Profile</p>
 </template>

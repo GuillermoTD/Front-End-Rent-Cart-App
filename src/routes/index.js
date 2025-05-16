@@ -1,4 +1,4 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createRouter, createWebHistory} from 'vue-router'
 
 import HomePage from '../views/HomePage.vue'
 import CarsPage from '../views/CarsPage.vue'
@@ -10,10 +10,11 @@ const routes = [
   { path: '/cars', component: CarsPage },
   { path: '/profile', component: ProfilePage },
   { path: '/search', component: SearchPage },
+  { path: '/search/:type', component: SearchPage },
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 })
 

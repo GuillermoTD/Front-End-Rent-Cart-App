@@ -20,7 +20,7 @@ import Select from 'primevue/select';
                 <div class="Hero_Content_Input_Btn">Search</div>
             </div>
             <div class="Hero_Content_Image">
-                <img src="../assets/img/tesla.png" alt="Hero_Image">
+                <img src="../assets/img/Hero2.png" alt="Hero_Image">
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@ import Select from 'primevue/select';
         }
 
         .Hero_Content_Image {
-            @apply w-[90%] h-[23rem] overflow-hidden flex items-center justify-center;
+            @apply w-[90%] h-[25rem] overflow-hidden flex items-center justify-center;
 
             img {
                 @apply w-full h-full object-contain;
