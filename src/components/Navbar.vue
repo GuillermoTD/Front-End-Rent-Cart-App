@@ -5,7 +5,7 @@ import InputText from 'primevue/inputtext'
 import Avatar from 'primevue/avatar'
 import Badge from 'primevue/badge'
 import Ripple from 'primevue/ripple'
-import {RouterLink} from "vue-router"
+import { RouterLink } from "vue-router"
 
 defineProps({
     msg: String,
@@ -16,25 +16,25 @@ defineProps({
 const items = ref([
     {
         label: 'Home',
-        url:"/",
+        url: "/",
         icon: 'pi pi-home',
         command: () => { console.log('Inicio') }
     },
     {
         label: 'Cars',
-        url:"/cars",
+        url: "/cars",
         icon: 'pi pi-book',
         items: [
             {
                 label: 'My Rents',
                 icon: 'pi pi-folder'
             },
-           
+
         ]
     },
     {
         label: 'profile',
-        url:"/profile",
+        url: "/profile",
         icon: 'pi pi-user',
         badge: 3,
         shortcut: 'Ctrl+P'
@@ -46,7 +46,7 @@ const items = ref([
     <div class="w-full fixed Navbar">
         <Menubar :model="items" class="rounded-none">
             <!-- Logo -->
-            <template #start>   
+            <template #start>
                 <RouterLink class="text-muted-color Logo">
                     <img src="../assets/img/roadster-fill.svg" alt="car-icon">
                     <h2>RentCard</h2>
@@ -59,7 +59,7 @@ const items = ref([
                     <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
                     <span v-if="item.shortcut"
                         class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{
-                        item.shortcut }}</span>
+                            item.shortcut }}</span>
                     <i v-if="hasSubmenu"
                         :class="['pi pi-angle-down ml-auto', { 'pi-angle-down': root, 'pi-angle-right': !root }]"></i>
                 </RouterLink>
@@ -67,30 +67,29 @@ const items = ref([
             <!-- Profile bubble -->
             <template #end>
                 <div class="flex items-center gap-2">
-                    <Avatar image="src\assets\profile.jpg" shape="circle" />
+                    <Avatar image="../assets/img/profile.jpg" shape="circle" />
                 </div>
             </template>
         </Menubar>
     </div>
-</template> 
+</template>
 
 <style scoped>
 @reference "tailwindcss";
 
-.p-menubar{
-    @apply flex gap-[1rem] justify-around;
+.p-menubar {
+    @apply flex gap-[1rem] justify-around px-[10%];
 }
-
 
 .Navbar {
     margin-bottom: 40rem;
-    border:none;
+    border: none;
     z-index: 100;
+    @apply z-[100];
+
 }
 
-.p-menubar{
-    border-radius:0%;
+.p-menubar {
+    border-radius: 0%;
 }
-
-
 </style>
