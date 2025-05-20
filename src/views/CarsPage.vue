@@ -54,10 +54,10 @@ const brands = ref(CarMakes);
 
 .CarsPage {
 
-    @apply flex flex-col gap-[2rem];
+    @apply flex flex-col gap-y-[4rem] w-full pb-[3rem];
 
     .CarsPage_Title {
-        @apply flex flex-col items-start;
+        @apply flex flex-col items-start mt-[3rem];
 
         h2 {
             @apply font-bold text-[2.7rem];

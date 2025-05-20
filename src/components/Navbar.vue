@@ -58,7 +58,7 @@ const items = ref([
                     <span>{{ item.label }}</span>
                     <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
                     <span v-if="item.shortcut"
-                        class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{
+                        class="ml-auto rounded bg-emphasis text-muted-color text-xs p-1">{{
                             item.shortcut }}</span>
                     <i v-if="hasSubmenu"
                         :class="['pi pi-angle-down ml-auto', { 'pi-angle-down': root, 'pi-angle-right': !root }]"></i>
@@ -85,7 +85,7 @@ const items = ref([
     margin-bottom: 40rem;
     border: none;
     z-index: 100;
-    @apply z-[100];
+    @apply z-[100] bg-red-500;
 
 }
 

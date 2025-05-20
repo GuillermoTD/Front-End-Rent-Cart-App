@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -9,7 +11,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --color1:#405EF2;
-  --cardColor:#F3F7FD;
+  --color2:#F6F7F9;
+  --cardColor:white;
 }
 
 .basic-border {
@@ -91,7 +94,7 @@ button:focus-visible {
 }
 
 .Page {
-  @apply mt-[3.4rem] min-h-[100vh] w-full flex items-center mb-[3rem]; 
+  @apply mt-[3.4rem] min-h-[100vh] w-full flex items-center mb-[3rem] bg-[var(--color2)]; 
 }
 
 .content{
@@ -109,3 +112,7 @@ button:focus-visible {
             @apply w-[2rem] h-[2rem];
         }
     }
+
+
+
+  

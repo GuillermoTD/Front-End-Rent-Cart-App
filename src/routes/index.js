@@ -9,10 +9,9 @@ import SearchPage from '../views/SearchPage.vue'
 const routes = [
   { path: '/', component: HomePage },
   { path: '/cars', component: CarsPage },
-  { path: '/cars:type', component: CarItemPage },
+  { path: '/cars/:id', component: CarItemPage },
   { path: '/profile', component: ProfilePage },
   { path: '/search', component: SearchPage },
-  { path: '/search/:type', component: SearchPage },
 ]
 
 const router = createRouter({
