@@ -13,7 +13,7 @@ console.log(Category.map(item => console.log(item.name)));
         <Hero></Hero>
         <h2 class="HomePage_Subtitle">Browse By Type</h2>
         <div class="HomePage_CarTypeFilter">
-            <RouterLink :to="`/search/${item.name.toLowerCase()}`" class="HomePage_CarTypeFilter_Item basic-border "
+            <RouterLink :to="`/cars/${item.name.toLowerCase()}`" class="HomePage_CarTypeFilter_Item basic-border "
                 v-for="item in Category" :key="item.id">
                 <img :src="item.icon" alt="">
                 <strong>{{ item.name }}</strong>

@@ -3,7 +3,15 @@ import Navbar from "./components/Navbar.vue"
 import Footer from "./components/Footer.vue"
 import { RouterView } from "vue-router"
 import 'remixicon/fonts/remixicon.css';
+// Import Swiper styles
+import 'swiper/css';
 
+import 'swiper/css/effect-cards';
+
+import './style.css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 </script>
 
 <template>
