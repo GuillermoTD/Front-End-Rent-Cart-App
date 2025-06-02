@@ -2,6 +2,7 @@
 import { Bookmark } from 'lucide-vue-next';
 import { EffectCards } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import ReviewItem from '../components/ReviewItem.vue';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/navigation'; // si usas navegación
@@ -74,9 +75,15 @@ const onSlideChange = () => {
             <div class="CarItemPage_Reviews">
                 <Swiper :modules="[EffectCards]" effect="cards" grab-cursor="true" :slides-per-view="1"
                     class="mySwiper w-[80%] h-[20rem] sm:w-[80%] sm:h-[20rem] md:w-[40%] md:h-[20rem]">
-                    <SwiperSlide class="bg-red-500">Slide 1</SwiperSlide>
-                    <SwiperSlide class="bg-emerald-500">Slide 2</SwiperSlide>
-                    <SwiperSlide class="bg-blue-500">Slide 3</SwiperSlide>
+                    <SwiperSlide class="bg-slate-50">
+                        <ReviewItem/>
+                    </SwiperSlide>
+                    <SwiperSlide class="bg-white">
+                        <ReviewItem>Slide 2</ReviewItem>
+                    </SwiperSlide>
+                    <SwiperSlide class="bg-white">
+                        <ReviewItem>Slide 3</ReviewItem>
+                    </SwiperSlide>
                 </Swiper>
 
             </div>
