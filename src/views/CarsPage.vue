@@ -39,7 +39,7 @@ const brands = ref(CarMakes);
                 </div>
             </div>
 
-            <div class="CarsPage_GridCards">
+            <div class="GridCards">
 
                 <Card  v-for="item in CarMakes" :key="item.id"></Card>
             </div>
@@ -49,7 +49,7 @@ const brands = ref(CarMakes);
 
 
 
-<style scoped>
+<style >
 @reference "tailwindcss";
 
 .CarsPage {
@@ -82,11 +82,6 @@ const brands = ref(CarMakes);
         }
     }
 
-    .CarsPage_GridCards {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-        place-items:center;
-        @apply w-full min-h-[70vh] gap-y-[2rem];
-    }
+    
 }
 </style>

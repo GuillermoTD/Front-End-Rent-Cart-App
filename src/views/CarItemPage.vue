@@ -3,11 +3,9 @@ import { Bookmark } from 'lucide-vue-next';
 import { EffectCards } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import ReviewItem from '../components/ReviewItem.vue';
-import 'swiper/css';
-import 'swiper/css/effect-cards';
-import 'swiper/css/navigation'; // si usas navegación
-import 'swiper/css/pagination'; // si usas paginación
-
+import { RouterLink } from "vue-router"
+import Card from '../components/Card.vue';
+import { CarMakes } from '../assets/js/Data';
 
 const onSwiper = (swiper) => {
     console.log(swiper);
@@ -72,20 +70,30 @@ const onSlideChange = () => {
                 </div>
             </div>
 
-            <div class="CarItemPage_Reviews">
+            <div class="CarItemPage_Reviews ">
                 <Swiper :modules="[EffectCards]" effect="cards" grab-cursor="true" :slides-per-view="1"
                     class="mySwiper w-[80%] h-[20rem] sm:w-[80%] sm:h-[20rem] md:w-[40%] md:h-[20rem]">
-                    <SwiperSlide class="bg-slate-50">
-                        <ReviewItem/>
+                    <SwiperSlide class="bg-slate-50 shadow-sm">
+                        <ReviewItem profileImg="/imagendeperfil" :data="({ info: 'hola' })" />
                     </SwiperSlide>
-                    <SwiperSlide class="bg-white">
+                    <SwiperSlide class="bg-slate-50 shadow-sm">
                         <ReviewItem>Slide 2</ReviewItem>
                     </SwiperSlide>
-                    <SwiperSlide class="bg-white">
+                    <SwiperSlide class="bg-slate-50 shadow-sm">
                         <ReviewItem>Slide 3</ReviewItem>
                     </SwiperSlide>
                 </Swiper>
 
+            </div>
+
+            <div class="CarItemPage_RecomendedCardsBox">
+                <div class="w-full flex items-center justify-between px-[2rem]">
+                    <p class="text-slate-400 font-semibold">Recomendation Car</p>
+                    <RouterLink to="/cars">Ver todos</RouterLink>
+                </div>
+                <div class="GridCards">
+                    <Card v-for="item in CarMakes.slice(0,4)" :key="item.id"></Card>
+                </div>
             </div>
         </div>
 
@@ -157,5 +165,15 @@ const onSlideChange = () => {
 
 .CarItemPage_CarDetailImages {
     @apply border border-slate-200 w-full h-[6rem];
+}
+
+.CarItemPage_Reviews {
+    @apply w-full h-[30rem] flex flex-col items-center justify-center;
+
+    .CarItemPage_Reviews {
+        @apply w-[70%];
+    }
+
+
 }
 </style>
